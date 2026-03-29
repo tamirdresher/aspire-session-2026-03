@@ -1,0 +1,9 @@
+{
+  "name": "frontend-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.0",
+    "node-fetch": "^3.3.0"
+  }
+}

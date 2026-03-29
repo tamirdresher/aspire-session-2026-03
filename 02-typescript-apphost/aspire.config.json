@@ -1,0 +1,15 @@
+{
+  "appHost": {
+    "path": "apphost.ts",
+    "language": "typescript/nodejs"
+  },
+  "sdk": {
+    "version": "13.2.0"
+  },
+  "channel": "stable",
+  "profiles": {
+    "default": {
+      "applicationUrl": "https://localhost:17000;http://localhost:15000"
+    }
+  }
+}
