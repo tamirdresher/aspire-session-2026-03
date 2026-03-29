@@ -1,0 +1,17 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+*.db
+*.db-shm
+*.db-wal
+node_modules/
+dist/
+.modules/
+*.log
+__pycache__/
+*.pyc
+.env
+.DS_Store
