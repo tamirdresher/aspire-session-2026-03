@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Users\\tamirdresher\\source\\repos\\aspire-session-2026-03\\02-typescript-apphost\\services\\api\\ApiService\\ApiService.csproj",
         "projectName": "ApiService",
         "projectPath": "C:\\Users\\tamirdresher\\source\\repos\\aspire-session-2026-03\\02-typescript-apphost\\services\\api\\ApiService\\ApiService.csproj",
-        "packagesPath": "C:\\.tools\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\tamirdresher\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\tamirdresher\\source\\repos\\aspire-session-2026-03\\02-typescript-apphost\\services\\api\\ApiService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -28,7 +28,9 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/microsoft/_packaging/WDATP/nuget/v3/index.json": {}
+          "https://microsoft.pkgs.visualstudio.com/_packaging/WD.Services.OneFeed/nuget/v3/index.json": {},
+          "https://microsoft.pkgs.visualstudio.com/_packaging/WDATP/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/microsoft/WDATP/_packaging/BaseRP/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {

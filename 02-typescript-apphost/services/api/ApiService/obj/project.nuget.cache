@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wHcFwD0rKJ4=",
+  "dgSpecHash": "vJZjH0LtjvQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\tamirdresher\\source\\repos\\aspire-session-2026-03\\02-typescript-apphost\\services\\api\\ApiService\\ApiService.csproj",
   "expectedPackageFiles": [
-    "C:\\.tools\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.4\\microsoft.aspnetcore.openapi.10.0.4.nupkg.sha512",
-    "C:\\.tools\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+    "C:\\Users\\tamirdresher\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.4\\microsoft.aspnetcore.openapi.10.0.4.nupkg.sha512",
+    "C:\\Users\\tamirdresher\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
   ],
   "logs": []
 }

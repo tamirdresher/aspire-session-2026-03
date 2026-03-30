@@ -15,3 +15,7 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
+01-basic-apphost/BasicAppHost.AppHost/obj/BasicAppHost.AppHost.csproj.nuget.dgspec.json
+01-basic-apphost/BasicAppHost.AppHost/obj/BasicAppHost.AppHost.csproj.nuget.g.props
+01-basic-apphost/BasicAppHost.AppHost/obj/project.assets.json
+01-basic-apphost/BasicAppHost.AppHost/obj/project.nuget.cache

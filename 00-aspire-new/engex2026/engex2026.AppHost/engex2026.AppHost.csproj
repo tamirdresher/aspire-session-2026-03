@@ -1,0 +1,19 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.2.0">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>e16c4a2f-b7a3-488b-8efc-a468a1ac41ef</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\engex2026.Server\engex2026.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.JavaScript" Version="13.2.0" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="13.2.0" />
+  </ItemGroup>
+</Project>
