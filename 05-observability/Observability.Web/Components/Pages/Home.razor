@@ -1,0 +1,19 @@
+@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Observability Demo</h1>
+
+<p>This demo showcases .NET Aspire's built-in observability features:</p>
+<ul>
+    <li><strong>Distributed Tracing</strong> — See request flows across services</li>
+    <li><strong>Metrics</strong> — Custom counters and histograms</li>
+    <li><strong>Structured Logging</strong> — Rich log data with named parameters</li>
+</ul>
+
+<p>Try these API endpoints to generate telemetry:</p>
+<ul>
+    <li><code>/weatherforecast</code> — Normal request with structured logs</li>
+    <li><code>/slow</code> — Slow request with custom spans (check Traces in the dashboard)</li>
+    <li><code>/error</code> — Error request (check Structured Logs for the exception)</li>
+</ul>

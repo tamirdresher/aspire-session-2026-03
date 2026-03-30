@@ -1,9 +1,13 @@
 using Scalar.AspNetCore;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
+
+// Add Redis client integration
+builder.AddRedisClient("cache");
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
@@ -37,6 +41,25 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+// Redis cache endpoints
+app.MapGet("/cache/set/{key}/{value}", async (string key, string value, IConnectionMultiplexer redis) =>
+{
+    var db = redis.GetDatabase();
+    await db.StringSetAsync(key, value);
+    return Results.Ok(new { key, value, message = "Cached successfully" });
+})
+.WithName("SetCacheValue");
+
+app.MapGet("/cache/get/{key}", async (string key, IConnectionMultiplexer redis) =>
+{
+    var db = redis.GetDatabase();
+    var value = await db.StringGetAsync(key);
+    return value.HasValue
+        ? Results.Ok(new { key, value = value.ToString() })
+        : Results.NotFound(new { key, message = "Key not found" });
+})
+.WithName("GetCacheValue");
 
 app.MapDefaultEndpoints();
 

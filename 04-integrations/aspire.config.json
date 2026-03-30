@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "Integrations.AppHost/Integrations.AppHost.csproj"
+  }
+}

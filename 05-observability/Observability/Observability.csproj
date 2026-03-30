@@ -11,6 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Observability.ApiService\Observability.ApiService.csproj" />
+    <ProjectReference Include="..\Observability.Web\Observability.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.0" />
   </ItemGroup>
 
