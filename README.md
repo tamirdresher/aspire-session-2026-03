@@ -79,6 +79,26 @@ Orchestrating non-.NET services (Node.js, Python, etc.) with Aspire.
 - Service-to-service communication
 - Cross-language observability
 
+### 7. [AI Agent Integration](./07-ai-agent-integration/) 🤖 NEW
+**AI Agents + Aspire: The Future of Distributed Systems**
+
+Demonstrates how AI agents (like Squad, GitHub Copilot, autonomous systems) can orchestrate and monitor distributed systems using Aspire as infrastructure.
+
+- **Agent Orchestrator** - Autonomous monitoring and decision-making
+- **Service Discovery** - Agent finds services automatically
+- **Health Monitoring** - Agent checks service health
+- **Metrics Collection** - Agent gathers performance data
+- **Intelligent Decisions** - Agent analyzes and acts
+
+**Why This Matters:**
+Modern AI agents need infrastructure to:
+- Discover microservices dynamically
+- Monitor system health in real-time
+- Make intelligent orchestration decisions
+- Report status and take automated actions
+
+Aspire provides the perfect foundation for AI-driven distributed systems with built-in service discovery, observability, and health checks.
+
 ## Running Examples
 
 Each example has its own README with specific instructions. General pattern:
@@ -98,6 +118,33 @@ The Aspire dashboard will open automatically at `https://localhost:17000` (defau
 - ✅ **Resource Commands** - `aspire resource <name> restart`
 - ✅ **Environment Diagnostics** - `aspire doctor`
 - ✅ **Detached Mode** - Background execution with `aspire run --detach`
+- 🤖 **AI Agent Integration** - Infrastructure for autonomous systems
+
+## AI Agents + Aspire
+
+Example 7 shows how Aspire enables AI-driven distributed systems:
+
+```
+AI Agent → Discovers Services → Monitors Health → Makes Decisions
+                                                           ↓
+                                                    Auto-remediation
+                                                    Scaling
+                                                    Notifications
+```
+
+**Use Cases:**
+- Autonomous SRE (Site Reliability Engineering)
+- Smart load balancing and auto-scaling
+- Cost optimization agents
+- Security monitoring agents
+- Development assistants (like Squad!)
+
+**Benefits:**
+1. **Service Discovery** - No hardcoded endpoints
+2. **Unified Observability** - Single source of truth
+3. **Health Checks** - Built-in `/health` endpoints
+4. **Resilience** - Retry, circuit breaker patterns
+5. **Local-to-Production Parity** - Same patterns everywhere
 
 ## Reference Materials
 
