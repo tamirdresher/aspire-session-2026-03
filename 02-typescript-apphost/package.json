@@ -8,11 +8,18 @@
     "dev": "aspire run",
     "start": "aspire run --detach"
   },
-  "keywords": ["aspire", "typescript", "orchestration"],
+  "keywords": [
+    "aspire",
+    "typescript",
+    "orchestration"
+  ],
   "author": "Tamir Dresher",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "vscode-jsonrpc": "^8.2.1"
   }
 }

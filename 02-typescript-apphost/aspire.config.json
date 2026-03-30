@@ -9,7 +9,12 @@
   "channel": "stable",
   "profiles": {
     "default": {
-      "applicationUrl": "https://localhost:17000;http://localhost:15000"
+      "applicationUrl": "https://localhost:17000;http://localhost:15000",
+      "environmentVariables": {
+        "ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL": "https://localhost:18889",
+        "ASPIRE_DASHBOARD_OTLP_HTTP_ENDPOINT_URL": "https://localhost:18890",
+        "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true"
+      }
     }
   }
 }

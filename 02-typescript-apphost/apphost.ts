@@ -18,46 +18,20 @@ import { createBuilder } from './.modules/aspire.js';
 async function main() {
     console.log('🚀 Starting TypeScript AppHost...');
 
-    // Create the distributed application builder
-    // This is equivalent to DistributedApplication.CreateBuilder() in C#
     const builder = await createBuilder();
 
-    // Add Redis cache container
-    // Aspire will pull and run the official Redis container image
-    const cache = await builder.addRedis("cache")
-        .withDataVolume(); // Persist data across restarts
-
-    // Add PostgreSQL database container
-    const db = await builder.addPostgres("postgres")
-        .withDataVolume()
-        .addDatabase("appdb"); // Create a database named "appdb"
-
     // Add .NET API service
-    // This references a .NET project and orchestrates it as a resource
-    const api = await builder.addProject("api", "./services/api/api.csproj")
-        .withReference(cache)      // Inject cache connection string
-        .withReference(db)          // Inject database connection string
-        .withEnvironmentVariable("GREETING", "Hello from TypeScript AppHost!")
-        .waitFor(cache)             // Wait for cache to be healthy before starting
-        .waitFor(db);               // Wait for database to be healthy
+    const api = await builder.addProject("api", "./services/api/ApiService/ApiService.csproj", "http")
+        .withEnvironment("GREETING", "Hello from TypeScript AppHost!");
 
-    // Add Node.js frontend application
-    // This orchestrates a Node.js/Express app alongside .NET services
-    const frontend = await builder.addNodeApp("frontend", "./services/frontend", "server.js")
-        .withReference(api)         // Service discovery: frontend can call API
-        .withExternalHttpEndpoints() // Expose HTTP endpoints externally
-        .withEnvironmentVariable("NODE_ENV", "development");
-
-    // Add a Python service (optional - demonstrates polyglot)
-    const worker = await builder.addExecutable("worker", "python", "./services/worker", ["app.py"])
-        .withReference(cache)
-        .withEnvironmentVariable("REDIS_HOST", cache);
+    // Add Node.js frontend as an executable
+    const frontend = await builder.addExecutable("frontend", "node", "./services/frontend", ["server.js"])
+        .withReference(api)
+        .withExternalHttpEndpoints()
+        .withEnvironment("NODE_ENV", "development");
 
     console.log('✅ AppHost configured successfully');
-    console.log('📊 Dashboard will open at https://localhost:17000');
 
-    // Build and run the application
-    // This starts all resources and opens the Aspire dashboard
     await builder.build().run();
 }
 
