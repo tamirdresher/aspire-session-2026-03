@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Microsoft Agent Framework GA (1.0.0) — the unified open-source SDK for building AI agents.
+         Replaces Semantic Kernel + AutoGen previews with a single production-ready package.
+         Install: dotnet add package Microsoft.Agents.AI.AzureAI -->
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.2.0" />
+    <PackageReference Include="Azure.Identity" Version="1.13.2" />
+    <PackageReference Include="Microsoft.Agents.AI.AzureAI" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.6.0" />
+    <!-- Aspire service discovery and hosting -->
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.5" />
     <PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="10.4.0" />
